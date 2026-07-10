@@ -1,0 +1,58 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Secrets and certificates
+*.pem
+*.key
+*.p12
+*.jks
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+
+# Backend
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+
+# Python
+ai-service/.venv/
+ai-service/venv/
+ai-service/__pycache__/
+ai-service/.pytest_cache/
+ai-service/.mypy_cache/
+ai-service/.ruff_cache/
+*.pyc
+
+# Docker local data
+infra/data/
+infra/volumes/
+
+# Test reports
+coverage/
+test-results/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
