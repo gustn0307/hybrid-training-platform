@@ -51,6 +51,7 @@ Future versions will support automatic workout synchronization through wearable 
 
 - Java 17
 - Spring Boot
+- Gradle
 - Spring Security
 - JWT
 - Spring Data JPA
