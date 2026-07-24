@@ -4,9 +4,8 @@
 
 * 프로젝트: AI Love Workout
 * 문서: ADR-002
-* 상태: PROPOSED
+* 상태: ACCEPTED
 * 작성일: 2026-07-21
-> 기능 요구사항 확정 후 최종 채택 여부를 결정한다.
 
 ---
 
@@ -106,11 +105,12 @@ Exercise Record는 실제 수행한 개별 운동 기록을 의미한다.
 
 이 결정으로 인해
 
-* 도메인 모델은 WorkoutSession과 ExerciseRecord를 분리한다.
-* ERD는 WorkoutSession과 ExerciseRecord를 1:N 관계로 설계한다.
-* 운동 기록 API는 WorkoutSession을 기준으로 관리한다.
-* AI 추천은 WorkoutSession을 생성하고, 사용자가 승인한 뒤 ExerciseRecord를 저장한다.
-* 통계는 ExerciseRecord를 기준으로 계산한다.
+* Workout Session은 운동 활동 자체를 관리한다.
+* Exercise Record는 Workout Session에 포함되는 실제 운동 수행 기록을 관리한다.
+* 하나의 Workout Session은 여러 개의 Exercise Record를 포함할 수 있다.
+* AI 추천 결과는 Workout Session이 아니라 Workout Plan Candidate를 생성한다.
+* Workout Session은 사용자가 운동을 시작할 때 생성된다.
+* Exercise Record는 실제 운동 수행 결과를 기록한다.
 
 ---
 

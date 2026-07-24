@@ -94,9 +94,12 @@ ADR-003
 
 # 7. 현재 ADR 목록
 
-| 번호 | 제목 | 상태 |
-|------|------|------|
-| ADR-001 | (예정) Human-in-the-loop | Draft |
+| 번호      | 제목                                     | 상태                          |
+| ------- | -------------------------------------- | --------------------------- |
+| ADR-001 | Human-in-the-loop 채택                   | ACCEPTED                    |
+| ADR-002 | Workout Session과 Exercise Record를 분리한다 | ACCEPTED  |
+| ADR-003 | Workout Plan Lifecycle를 정의한다           |ACCEPTED                    |
+| ADR-004 | Workout Plan Candidate Policy를 정의한다    | ACCEPTED                    |
 
 ---
 

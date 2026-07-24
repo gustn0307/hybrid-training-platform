@@ -35,7 +35,7 @@
 | `personas.md` | 주요 사용자 유형 정의 | 작성 완료 |
 | `user-stories.md` | 사용자 관점의 요구사항 정의 | 작성 완료 |
 | `user-journey.md` | 사용자 행동, 생각, 페인 포인트와 서비스 기회 정의 | 작성 완료 |
-| `functional-requirements.md` | 시스템 기능 요구사항 정의 | 작성 예정 |
+| `functional-requirements.md` | 시스템 기능 요구사항 정의 | 작성 중 |
 | `non-functional-requirements.md` | 성능, 보안, 가용성 등 품질 요구사항 정의 | 작성 예정 |
 | `mvp-scope.md` | MVP 포함 범위와 제외 범위 정의 | 작성 완료 |
 | `success-metrics.md` | 성공 지표와 측정 규칙 정의 | 작성 예정 |
