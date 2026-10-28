@@ -35,6 +35,27 @@ AI Love Workout is an AI-powered hybrid training platform supporting:
 11. Do not delete existing files without explicit approval.
 12. Do not execute destructive Git, Docker, database, or operating-system commands without explicit approval.
 
+## Code Documentation and Comment Rules
+
+These rules apply to all code that Codex creates or modifies in this repository from now on.
+
+1. Include comments explaining purpose and design intent in new or modified code when needed.
+2. Do not comment on every line of code.
+3. Avoid unnecessary comments when variable and function names already make the behavior clear.
+4. Write comments in Korean whenever practical.
+5. Preserve the original spelling of class names, method names, API names, and technical terms.
+6. Explain why a step is necessary rather than repeating what the code does.
+7. Explain business rules, state transitions, validation conditions, authorization checks, and exception-handling decisions when needed.
+8. Use Javadoc for major Java classes and complex methods.
+9. Use Docstrings for major Python modules and functions.
+10. Add comments where needed for complex React and TypeScript components, Hooks, asynchronous operations, and state management.
+11. Explain non-obvious settings and important constraints in SQL, Docker, YAML, and configuration files.
+12. Explain the business rules being verified in tests when needed.
+13. Write TODO comments only for specific unresolved tasks and explain why they are needed.
+14. Do not retain outdated comments describing behavior that has been removed or changed.
+15. Keep comments consistent with the actual implementation at all times.
+16. Never include secrets such as passwords, API Keys, or Tokens in comments.
+
 ## Architecture Rules
 
 - Spring Boot is the main public API server.

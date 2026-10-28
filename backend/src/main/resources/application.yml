@@ -1,0 +1,28 @@
+server:
+  port: ${BACKEND_PORT:8080}
+spring:
+  application:
+    name: ai-love-workout
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:127.0.0.1}:${DB_PORT:5432}/${POSTGRES_DB:ai_love_workout}?connectTimeout=2&socketTimeout=3
+    username: ${POSTGRES_USER:ai_love_workout}
+    # 기본 비밀번호를 두지 않아 실행 환경에서 명시적으로 주입하도록 한다.
+    password: ${POSTGRES_PASSWORD}
+    hikari:
+      # 풀에서 연결을 얻지 못할 때 헬스 요청이 장시간 대기하지 않도록 제한한다.
+      connection-timeout: 3000
+  jpa:
+    # 요청 후반부의 암묵적인 DB 접근을 막고 영속성 처리는 트랜잭션 안에서 수행한다.
+    open-in-view: false
+    hibernate:
+      # 실행만으로 기존 스키마가 생성·변경되지 않도록 한다.
+      ddl-auto: none
+    properties:
+      hibernate:
+        jdbc:
+          # 서버 시각은 UTC로 처리하고 사용자 시간대와 분리한다.
+          time_zone: UTC
+  jackson:
+    time-zone: UTC
+app:
+  ai-service-url: ${AI_SERVICE_URL:http://127.0.0.1:8000}

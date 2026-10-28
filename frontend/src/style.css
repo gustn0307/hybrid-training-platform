@@ -1,0 +1,24 @@
+:root { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif; color: #183e36; background: #f3f5ee; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1080px; margin: auto; padding: 32px 32px 24px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.brand { font-size: 14px; font-weight: 800; letter-spacing: .14em; }
+.tag { border: 1px solid #c9d5c7; border-radius: 20px; padding: 7px 13px; font-size: 12px; }
+.intro { padding: 75px 0 40px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; color: #57715f; }
+h1 { margin: 18px 0 22px; font-size: clamp(38px, 6vw, 68px); line-height: 1.27; letter-spacing: -.065em; }
+.description { font-size: 17px; line-height: 1.9; color: #58695f; }
+.panel { max-width: 680px; background: #fff; border: 1px solid #dce3d6; border-radius: 18px; padding: 26px; }
+.panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+h2 { font-size: 18px; margin: 0; }
+button { border: none; background: #174e43; color: #fff; padding: 10px 16px; border-radius: 9px; font: inherit; font-size: 13px; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+button:focus-visible { outline: 3px solid #92b67c; outline-offset: 3px; }
+[role=status] { color: #5a6b61; font-size: 14px; line-height: 1.7; }
+dl { margin: 22px 0; }
+dl div { display: flex; justify-content: space-between; border-top: 1px solid #edf0e9; padding: 13px 0; font-size: 14px; }
+dd { margin: 0; font-weight: 600; }
+.note { font-size: 12px; line-height: 1.8; color: #758174; margin-bottom: 0; }
+footer { padding-top: 36px; color: #788476; font-size: 12px; }
+@media (max-width: 600px) { main { padding: 24px 20px; } .intro { padding-top: 55px; } .panel { padding: 20px; } .brand { font-size: 11px; } .tag { font-size: 10px; } }
