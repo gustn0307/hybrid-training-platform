@@ -21,4 +21,23 @@ dl div { display: flex; justify-content: space-between; border-top: 1px solid #e
 dd { margin: 0; font-weight: 600; }
 .note { font-size: 12px; line-height: 1.8; color: #758174; margin-bottom: 0; }
 footer { padding-top: 36px; color: #788476; font-size: 12px; }
+form { display: grid; gap: 18px; margin: 24px 0; }
+form > label { display: grid; gap: 8px; font-size: 14px; font-weight: 600; }
+input:not([type=checkbox]), select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #b7c8bd; border-radius: 8px; background: white; color: #183e36; font: inherit; }
+input:focus-visible, select:focus-visible { outline: 3px solid #92b67c; outline-offset: 2px; }
+small { font-weight: 400; color: #647469; font-size: 12px; }
+fieldset { margin: 0; padding: 16px; border: 1px solid #c9d5c7; border-radius: 10px; }
+legend { font-size: 14px; padding: 0 5px; }
+.choices { display: flex; flex-wrap: wrap; gap: 12px 18px; }
+.choice { display: flex; gap: 8px; align-items: center; min-height: 36px; font-size: 14px; }
+input[type=checkbox] { width: 18px; height: 18px; accent-color: #174e43; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.secondary { background: #edf2e9; color: #214b3e; }
+.notice, .error { max-width: 680px; padding: 14px 18px; border-radius: 10px; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+.notice { background: #e3efde; }
+.error { color: #812b21; background: #fff0eb; border: 1px solid #eac1b7; }
+.account { font-size: 14px; overflow-wrap: anywhere; line-height: 1.8; }
+.health { margin-top: 24px; }
+summary { cursor: pointer; font-size: 14px; }
+dd { text-align: right; padding-left: 16px; }
 @media (max-width: 600px) { main { padding: 24px 20px; } .intro { padding-top: 55px; } .panel { padding: 20px; } .brand { font-size: 11px; } .tag { font-size: 10px; } }

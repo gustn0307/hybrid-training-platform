@@ -15,8 +15,8 @@ spring:
     # 요청 후반부의 암묵적인 DB 접근을 막고 영속성 처리는 트랜잭션 안에서 수행한다.
     open-in-view: false
     hibernate:
-      # 실행만으로 기존 스키마가 생성·변경되지 않도록 한다.
-      ddl-auto: none
+      # 스키마 변경은 Flyway만 담당하고 JPA는 매핑 일치 여부를 확인한다.
+      ddl-auto: validate
     properties:
       hibernate:
         jdbc:
@@ -24,5 +24,15 @@ spring:
           time_zone: UTC
   jackson:
     time-zone: UTC
+    deserialization:
+      fail-on-unknown-properties: true
+      fail-on-numbers-for-enums: true
+  flyway:
+    clean-disabled: true
+# SQL 오류에 입력 이메일·건강 정보가 포함될 수 있어 원문 DB 예외 로깅을 차단한다.
+logging:
+  level:
+    org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 'OFF'
 app:
   ai-service-url: ${AI_SERVICE_URL:http://127.0.0.1:8000}
+  jwt-secret: ${JWT_SECRET}

@@ -5,7 +5,7 @@ weight training, and calisthenics.
 
 ## Development Status
 
-현재는 러닝·맨몸운동 1차 MVP를 위한 실행 골격 단계입니다. React 기본 화면, Spring Boot·FastAPI 헬스 API와 PostgreSQL 연결 점검을 제공하며 회원가입·운동 기록·추천은 아직 구현하지 않았습니다.
+현재는 러닝·맨몸운동 1차 MVP를 위한 AUTH + USER 구현 단계입니다. React와 Spring Boot·PostgreSQL로 회원가입·로그인·운동 프로필 최초 설정·조회·부분 수정·로그아웃을 연결하고 Spring Boot·FastAPI 헬스 API와 DB 연결 점검을 유지합니다. 운동 기록·추천은 아직 구현하지 않았습니다.
 
 * [개발 환경 실행·테스트](docs/development.md)
 * [1차 구현 범위](docs/requirements/portfolio-mvp-scope-2026-11-01.md)

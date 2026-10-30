@@ -1,6 +1,9 @@
 package com.ailoveworkout.health;
 
 import com.ailoveworkout.config.SecurityConfig;
+import com.ailoveworkout.auth.JwtService;
+import com.ailoveworkout.auth.RevokedTokenRepository;
+import com.ailoveworkout.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
@@ -21,6 +24,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class HealthControllerTest {
     @Autowired MockMvc mvc;
     @MockitoBean DependencyHealthService dependencies;
+    @MockitoBean JwtService jwt;
+    @MockitoBean UserRepository users;
+    @MockitoBean RevokedTokenRepository revoked;
 
     @Test
     void livenessIsPublic() throws Exception {
@@ -41,11 +47,12 @@ class HealthControllerTest {
 
     @Test
     void unrelatedEndpointsAreDenied() throws Exception {
-        mvc.perform(get("/api/v1/users/me")).andExpect(status().isForbidden());
+        mvc.perform(get("/api/v1/users/me")).andExpect(status().isUnauthorized())
+                .andExpect(jsonPath("$.code").value("UNAUTHENTICATED"));
     }
 
     @Test
     void healthCannotBeUsedForWrites() throws Exception {
-        mvc.perform(post("/api/v1/health")).andExpect(status().isForbidden());
+        mvc.perform(post("/api/v1/health")).andExpect(status().isUnauthorized());
     }
 }

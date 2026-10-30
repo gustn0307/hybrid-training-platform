@@ -38,6 +38,8 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-ai_love_workout}
       POSTGRES_USER: ${POSTGRES_USER:-ai_love_workout}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your environment or local .env}
+      # 실제 서명키는 실행 환경에서만 전달하고 기본 키를 두지 않는다.
+      JWT_SECRET: ${JWT_SECRET:?Set a Base64 encoded random JWT_SECRET of at least 32 bytes}
       # 호스트 공개 포트가 아닌 내부 서비스 이름으로 Spring Boot가 FastAPI를 호출한다.
       AI_SERVICE_URL: http://ai-service:8000
       BACKEND_PORT: 8080
